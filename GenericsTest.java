@@ -17,5 +17,16 @@ public class GenericsTest {
         Assert.assertEquals(C[2], g.findMaxInt(C));
     }
 
+    @Test
+    public void given3FFloatsShouldReturnMaximum(){
+        Generics g=new Generics();
+        Float[] A={3.2f,2.1f,1.8f};
+        Assert.assertEquals(A[0],g.findMaxFloat(A));
+        Float[] B={3.5f,9.1f,5.7f};
+        Assert.assertEquals(B[1],g.findMaxFloat(B));
+        Float[] C={2.8f,6.1f,10.5f};
+        Assert.assertEquals(C[2], g.findMaxFloat(C));
+    }
+
 
 }
