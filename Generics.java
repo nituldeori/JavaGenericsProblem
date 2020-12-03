@@ -20,4 +20,14 @@ public class Generics {
         }
         return max;
     }
+
+    public String findMaxString(String[] C){
+        String max=C[0];
+        for(int i=1;i<C.length;i++){
+            if(C[i].compareTo(max)>0){
+                max=C[i];
+            }
+        }
+        return max;
+    }
 }

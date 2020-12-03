@@ -18,7 +18,7 @@ public class GenericsTest {
     }
 
     @Test
-    public void given3FFloatsShouldReturnMaximum(){
+    public void given3FloatsShouldReturnMaximum(){
         Generics g=new Generics();
         Float[] A={3.2f,2.1f,1.8f};
         Assert.assertEquals(A[0],g.findMaxFloat(A));
@@ -26,6 +26,17 @@ public class GenericsTest {
         Assert.assertEquals(B[1],g.findMaxFloat(B));
         Float[] C={2.8f,6.1f,10.5f};
         Assert.assertEquals(C[2], g.findMaxFloat(C));
+    }
+
+    @Test
+    public void given3StringsShouldReturnMaximum(){
+        Generics g=new Generics();
+        String[] A={"Nitul","Hayato","Alok"};
+        Assert.assertEquals(A[0],g.findMaxString(A));
+        String[] B={"Misa","Shaini","Kshmir"};
+        Assert.assertEquals(B[1],g.findMaxString(B));
+        String[] C={"Adam","Eve","Jay"};
+        Assert.assertEquals(C[2], g.findMaxString(C));
     }
 
 
