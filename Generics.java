@@ -1,6 +1,6 @@
 package com.findmaximumgenerics;
 
-public class Generics{
+public class Generics<K extends Comparable<K>>{
     public Integer findMaxInt(Integer[] A){
         Integer max=A[0];
         for(int i=1;i<A.length;i++){
@@ -8,6 +8,7 @@ public class Generics{
                 max=A[i];
             }
         }
+        printMax(max);
         return max;
     }
 
@@ -18,6 +19,7 @@ public class Generics{
                 max=B[i];
             }
         }
+        printMax(max);
         return max;
     }
 
@@ -28,6 +30,7 @@ public class Generics{
                 max=C[i];
             }
         }
+        printMax(max);
         return max;
     }
 
@@ -38,6 +41,11 @@ public class Generics{
                 max=D[i];
             }
         }
+        printMax(max);
         return max;
+    }
+
+    public static <K> void printMax(K max){
+        System.out.println(max);
     }
 }
